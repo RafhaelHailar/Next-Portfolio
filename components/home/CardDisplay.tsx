@@ -20,11 +20,11 @@ function CardDisplay() {
               id: string;
               name: string;
               image: string;
-            }) => <Card id={id} name={name} image={image} />
+            }) => <Card key={id} id={id} name={name} image={image} />
           )
         : new Array(MAX_AMOUNT)
             .fill(null)
-            .map(() => <Skeleton className="h-40 w-52" />)}
+            .map((_, index) => <Skeleton key={index} className="h-40 w-52" />)}
     </div>
   );
 }
