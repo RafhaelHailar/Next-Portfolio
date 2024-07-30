@@ -11,10 +11,11 @@ datasource db {
 model Projects {
   id          String   @id @default(cuid())
   name        String 
-  description String
-  image       String
-  video       String?
-  demoURL     String?
+  description String   @db.LongText
+  image       String   @db.LongText
+  video       String?  @db.LongText
+  demoURL     String?  @db.LongText
+  techstack   String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
