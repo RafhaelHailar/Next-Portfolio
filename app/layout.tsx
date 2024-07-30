@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import "../globals.css";
+import "./globals.css";
+import QueryProvider from "@/providers/QueryProvider";
 
 const inter = Montserrat({ weight: ["700"], subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + " flex overflow-hidden dark"}>
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
