@@ -13,8 +13,8 @@ model Projects {
   name        String 
   description String
   image       String
-  video       String
-  demoURL     String
+  video       String?
+  demoURL     String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
