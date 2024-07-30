@@ -16,7 +16,7 @@ function Card({ id, name, image }: Props) {
         fill
         loading="lazy"
         unoptimized
-        className="relative object-cover"
+        className="relative object-contain"
         alt={name}
       />
     </div>
