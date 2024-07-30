@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + " flex overflow-hidden"}>
+      <body className={inter.className + " flex overflow-hidden dark"}>
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
