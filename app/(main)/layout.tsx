@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "../globals.css";
 import Sidebar from "@/components/Sidebar";
 
-const inter = Roboto({ weight: ["700"], subsets: ["latin"] });
+const inter = Montserrat({ weight: ["700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rafhael Hailar",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + " flex"}>
+      <body className={inter.className + " flex overflow-hidden"}>
         <Sidebar />
         {children}
       </body>
